@@ -1,0 +1,16 @@
+
+<img *ngIf="myPokemon" class="pokemon" src="{{myPokemon.sprites.other['official-artwork'].front_default}}">
+<div class="info">
+    <p>ID : {{myPokemon.id}}</p><p>Nom : {{myPokemon.name}}</p>
+    <p>Taille : {{myPokemon.height}} Poids : {{myPokemon.weight}}</p>
+</div>
+<input matInput  type="text" [(ngModel)]="namePokemon" class="getNameInput">
+<button mat-mini-fab  class="getNameSubmit" (click)="getByName()">?</button>
+<button mat-raised-button class="previous" (click)="previous()">Back</button>
+<button mat-raised-button class="next" (click)="next()">Next</button>
+<div class="positiontype"> 
+    <p  *ngFor="let item of myPokemon.types; let i =index">
+        <span><img class="types" src="{{switch(item.type.name)}}"></span>
+    </p>
+</div>
+
