@@ -6,4 +6,4 @@ steps:
             2.ng add @angular/material
             
             (run angular app )
-            3.gs s --open 
+            3.ng s --open 
